@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Map Service' do
-  it 'retrieves latitude and longitude for a city' do
+  it 'retrieves latitude and longitude for a city', :vcr do
 
     latLng = {
     :lat => 39.738453,
