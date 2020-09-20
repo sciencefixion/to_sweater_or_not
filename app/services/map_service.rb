@@ -5,7 +5,7 @@ class MapService < BaseService
       req.params['location'] = location
       req.params['thumbMaps'] = false
     end
-    json(response)
+    json(response)[:results].first[:locations].first[:latLng]
   end
 
   private
