@@ -32,8 +32,10 @@ gem 'faraday'
 gem 'fast_jsonapi'
 gem 'figaro'
 gem 'rubocop-rails', require: false
+gem 'travis'
 
 group :development, :test do
+  gem 'awesome_print'
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'pry'
@@ -53,7 +55,7 @@ group :test do
   gem 'shoulda-matchers'
   gem 'simplecov'
   gem 'vcr'
-
+  gem 'webmock'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
