@@ -78,7 +78,7 @@ RSpec.configure do |config|
     config.filter_sensitive_data('<MAPQUEST_CONSUMER_KEY>') { ENV['MAPQUEST_CONSUMER_KEY'] }
     config.filter_sensitive_data('<DEEPAI_API_KEY>') { ENV['DEEPAI_API_KEY'] }
     config.filter_sensitive_data('<OPEN_WEATHER_API_KEY>') { ENV['OPEN_WEATHER_API_KEY'] }
-    config.default_cassette_options = { re_record_interval: 1.days }
+    config.default_cassette_options = { re_record_interval: 1.hours }
     config.configure_rspec_metadata!
   end
 end
