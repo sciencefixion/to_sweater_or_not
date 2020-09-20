@@ -8,11 +8,13 @@ class MapService < BaseService
     json(response)[:results].first[:locations].first[:latLng]
   end
 
-  private
+  class << self
+    private
 
-  def self.map_conn
-    conn('http://www.mapquestapi.com') do |req|
-      req.params['key'] = ENV['MAPQUEST_CONSUMER_KEY']
+    def map_conn
+      conn('http://www.mapquestapi.com') do |req|
+        req.params['key'] = ENV['MAPQUEST_CONSUMER_KEY']
+      end
     end
   end
 end
