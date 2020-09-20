@@ -11,11 +11,7 @@ RSpec.describe 'Map Service' do
     response = MapService.get_latitude_and_longitude("Denver, CO")
 
     expect(response).to be_a(Hash)
-    expect(response.count).to eq(3)
-    expect(response[:results].first[:locations].first.count).to eq(21)
-
-    expected = response[:results].first[:locations].first[:latLng]
-
-    expect(expected).to eq(latLng)
+    expect(response.count).to eq(2)
+    expect(response).to eq(latLng)
   end
 end
