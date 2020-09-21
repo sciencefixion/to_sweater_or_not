@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.deepai.org/api/text2img?text=strawberry
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Api-Key:
+      - "<DEEPAI_API_KEY>"
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 21 Sep 2020 01:49:51 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Vary:
+      - Origin
+      X-Frame-Options:
+      - ALLOWALL
+      X-Powered-By:
+      - Phusion Passenger
+      Server:
+      - nginx + Phusion Passenger
+    body:
+      encoding: ASCII-8BIT
+      string: "{\n    \"id\": \"27709a68-6173-4574-a339-8e7145c1268f\", \n    \"output_url\":
+        \"https://api.deepai.org/job-view-file/27709a68-6173-4574-a339-8e7145c1268f/outputs/output.jpg\"\n}"
+  recorded_at: Mon, 21 Sep 2020 01:49:51 GMT
+recorded_with: VCR 6.0.0
