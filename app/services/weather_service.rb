@@ -1,6 +1,4 @@
 class WeatherService < BaseService
-
-
   def self.get_forecast(lat, lon)
     response = fore_conn.get('data/2.5/onecall') do |req|
       req.params['lat'] = lat
