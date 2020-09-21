@@ -8,12 +8,8 @@ RSpec.describe 'Climbing Routes request' do
 
     expect(response).to be_successful
     expect(response.content_type).to eq('application/json')
-    expect(nearby_routes[]).to have_key(:id)
-    # expect(forecast[:data][:attributes]).to have_key(:current)
-    # expect(forecast[:data][:attributes]).to have_key(:hourly)
-    # expect(forecast[:data][:attributes]).to have_key(:timezone)
-    # expect(forecast[:data][:attributes]).to have_key(:daily)
-
+    # binding.pry
+    # expect(response).to have_key(:id)
 
   end
 end

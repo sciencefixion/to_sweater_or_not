@@ -21,11 +21,11 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Mon, 21 Sep 2020 15:23:12 GMT
+      - Mon, 21 Sep 2020 17:30:54 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '15991'
+      - '18156'
       Connection:
       - keep-alive
       X-Cache-Key:
@@ -38,14 +38,12 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: '{"lat":39.74,"lon":-104.98,"timezone":"America/Denver","timezone_offset":-21600,"current":{"dt":1600701792,"sunrise":1600692427,"sunset":1600736311,"temp":291.43,"feels_like":286.91,"pressure":1024,"humidity":39,"dew_point":277.25,"uvi":6.87,"clouds":20,"visibility":10000,"wind_speed":4.6,"wind_deg":210,"weather":[{"id":801,"main":"Clouds","description":"few
-        clouds","icon":"02d"}]},"hourly":[{"dt":1600700400,"temp":291.43,"feels_like":288.85,"pressure":1024,"humidity":39,"dew_point":277.25,"clouds":20,"visibility":10000,"wind_speed":1.83,"wind_deg":188,"weather":[{"id":801,"main":"Clouds","description":"few
-        clouds","icon":"02d"}],"pop":0},{"dt":1600704000,"temp":294.25,"feels_like":291.57,"pressure":1021,"humidity":29,"dew_point":275.54,"clouds":10,"visibility":10000,"wind_speed":1.53,"wind_deg":189,"weather":[{"id":800,"main":"Clear","description":"clear
-        sky","icon":"01d"}],"pop":0},{"dt":1600707600,"temp":297.77,"feels_like":294.99,"pressure":1019,"humidity":21,"dew_point":274.01,"clouds":4,"visibility":10000,"wind_speed":1.32,"wind_deg":158,"weather":[{"id":800,"main":"Clear","description":"clear
-        sky","icon":"01d"}],"pop":0},{"dt":1600711200,"temp":300.94,"feels_like":297.42,"pressure":1017,"humidity":16,"dew_point":272.88,"clouds":1,"visibility":10000,"wind_speed":2.12,"wind_deg":127,"weather":[{"id":800,"main":"Clear","description":"clear
-        sky","icon":"01d"}],"pop":0},{"dt":1600714800,"temp":302.7,"feels_like":298.93,"pressure":1016,"humidity":14,"dew_point":272.5,"clouds":0,"visibility":10000,"wind_speed":2.39,"wind_deg":116,"weather":[{"id":800,"main":"Clear","description":"clear
-        sky","icon":"01d"}],"pop":0},{"dt":1600718400,"temp":303.69,"feels_like":301.46,"pressure":1015,"humidity":13,"dew_point":271.08,"clouds":0,"visibility":10000,"wind_speed":0.15,"wind_deg":37,"weather":[{"id":800,"main":"Clear","description":"clear
-        sky","icon":"01d"}],"pop":0},{"dt":1600722000,"temp":303.43,"feels_like":299.65,"pressure":1014,"humidity":13,"dew_point":271.33,"clouds":31,"visibility":10000,"wind_speed":2.32,"wind_deg":290,"weather":[{"id":802,"main":"Clouds","description":"scattered
+      string: '{"lat":39.74,"lon":-104.98,"timezone":"America/Denver","timezone_offset":-21600,"current":{"dt":1600709454,"sunrise":1600692427,"sunset":1600736311,"temp":299.38,"feels_like":295.56,"pressure":1024,"humidity":21,"dew_point":275.35,"uvi":6.87,"clouds":20,"visibility":10000,"wind_speed":3.1,"wind_deg":140,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}]},"hourly":[{"dt":1600707600,"temp":299.38,"feels_like":296.81,"pressure":1024,"humidity":21,"dew_point":275.35,"clouds":20,"visibility":10000,"wind_speed":1.32,"wind_deg":158,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"pop":0},{"dt":1600711200,"temp":300.46,"feels_like":297.13,"pressure":1021,"humidity":18,"dew_point":274.08,"clouds":10,"visibility":10000,"wind_speed":2.12,"wind_deg":127,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1600714800,"temp":302.05,"feels_like":298.34,"pressure":1018,"humidity":15,"dew_point":272.88,"clouds":4,"visibility":10000,"wind_speed":2.39,"wind_deg":116,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1600718400,"temp":303.41,"feels_like":301.15,"pressure":1016,"humidity":13,"dew_point":272.1,"clouds":1,"visibility":10000,"wind_speed":0.15,"wind_deg":37,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1600722000,"temp":303.4,"feels_like":299.62,"pressure":1014,"humidity":13,"dew_point":272.09,"clouds":31,"visibility":10000,"wind_speed":2.32,"wind_deg":290,"weather":[{"id":802,"main":"Clouds","description":"scattered
         clouds","icon":"03d"}],"pop":0},{"dt":1600725600,"temp":302.97,"feels_like":298.6,"pressure":1013,"humidity":14,"dew_point":271.82,"clouds":49,"visibility":10000,"wind_speed":3.29,"wind_deg":276,"weather":[{"id":802,"main":"Clouds","description":"scattered
         clouds","icon":"03d"}],"pop":0.04},{"dt":1600729200,"temp":301.72,"feels_like":297.04,"pressure":1013,"humidity":15,"dew_point":272.97,"clouds":59,"visibility":10000,"wind_speed":3.73,"wind_deg":202,"weather":[{"id":803,"main":"Clouds","description":"broken
         clouds","icon":"04d"}],"pop":0},{"dt":1600732800,"temp":300.55,"feels_like":294.87,"pressure":1014,"humidity":17,"dew_point":273.88,"clouds":62,"visibility":10000,"wind_speed":5.31,"wind_deg":180,"weather":[{"id":803,"main":"Clouds","description":"broken
@@ -87,7 +85,9 @@ http_interactions:
         clouds","icon":"04n"}],"pop":0},{"dt":1600862400,"temp":292.15,"feels_like":290.22,"pressure":1018,"humidity":33,"dew_point":275.77,"clouds":51,"visibility":10000,"wind_speed":0.46,"wind_deg":239,"weather":[{"id":803,"main":"Clouds","description":"broken
         clouds","icon":"04n"}],"pop":0},{"dt":1600866000,"temp":291.91,"feels_like":289.65,"pressure":1019,"humidity":33,"dew_point":275.64,"clouds":0,"visibility":10000,"wind_speed":0.87,"wind_deg":172,"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01d"}],"pop":0},{"dt":1600869600,"temp":292.9,"feels_like":290.14,"pressure":1019,"humidity":31,"dew_point":275.58,"clouds":0,"visibility":10000,"wind_speed":1.59,"wind_deg":199,"weather":[{"id":800,"main":"Clear","description":"clear
-        sky","icon":"01d"}],"pop":0}],"daily":[{"dt":1600711200,"sunrise":1600692427,"sunset":1600736311,"temp":{"day":296.39,"min":291.43,"max":300.84,"night":295.86,"eve":299.97,"morn":292.25},"feels_like":{"day":293.44,"night":292.33,"eve":294.34,"morn":289.76},"pressure":1021,"humidity":27,"dew_point":276.37,"wind_speed":2.12,"wind_deg":127,"weather":[{"id":500,"main":"Rain","description":"light
+        sky","icon":"01d"}],"pop":0},{"dt":1600873200,"temp":294.79,"feels_like":291.76,"pressure":1018,"humidity":27,"dew_point":275.42,"clouds":0,"visibility":10000,"wind_speed":1.9,"wind_deg":214,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1600876800,"temp":297.05,"feels_like":293.98,"pressure":1017,"humidity":23,"dew_point":275.24,"clouds":0,"visibility":10000,"wind_speed":1.88,"wind_deg":215,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0}],"daily":[{"dt":1600711200,"sunrise":1600692427,"sunset":1600736311,"temp":{"day":300.46,"min":292.25,"max":302.56,"night":295.93,"eve":300.48,"morn":292.25},"feels_like":{"day":297.13,"night":292.41,"eve":294.8,"morn":289.76},"pressure":1021,"humidity":18,"dew_point":274.08,"wind_speed":2.12,"wind_deg":127,"weather":[{"id":500,"main":"Rain","description":"light
         rain","icon":"10d"}],"clouds":10,"pop":0.33,"rain":0.12,"uvi":6.87},{"dt":1600797600,"sunrise":1600778883,"sunset":1600822611,"temp":{"day":301.06,"min":292.69,"max":302.84,"night":295.9,"eve":297.94,"morn":292.69},"feels_like":{"day":298.21,"night":293.45,"eve":292.05,"morn":290.15},"pressure":1016,"humidity":17,"dew_point":274.39,"wind_speed":1.36,"wind_deg":153,"weather":[{"id":804,"main":"Clouds","description":"overcast
         clouds","icon":"04d"}],"clouds":93,"pop":0.36,"uvi":6.64},{"dt":1600884000,"sunrise":1600865338,"sunset":1600908912,"temp":{"day":300.98,"min":292.15,"max":302.78,"night":299.04,"eve":300.79,"morn":292.15},"feels_like":{"day":298.42,"night":296.6,"eve":297.76,"morn":290.22},"pressure":1015,"humidity":16,"dew_point":273.53,"wind_speed":0.75,"wind_deg":131,"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01d"}],"clouds":0,"pop":0.21,"uvi":7.16},{"dt":1600970400,"sunrise":1600951795,"sunset":1600995212,"temp":{"day":302.59,"min":293.38,"max":305.26,"night":299.29,"eve":303.73,"morn":293.38},"feels_like":{"day":298.63,"night":293.97,"eve":297.84,"morn":289.55},"pressure":1012,"humidity":14,"dew_point":269.93,"wind_speed":2.65,"wind_deg":170,"weather":[{"id":802,"main":"Clouds","description":"scattered
@@ -95,6 +95,33 @@ http_interactions:
         sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":5.87},{"dt":1601143200,"sunrise":1601124707,"sunset":1601167814,"temp":{"day":294.82,"min":288.87,"max":298.38,"night":294.72,"eve":297.55,"morn":288.87},"feels_like":{"day":290.54,"night":290.54,"eve":292.85,"morn":284.78},"pressure":1016,"humidity":21,"dew_point":269.25,"wind_speed":2.96,"wind_deg":113,"weather":[{"id":803,"main":"Clouds","description":"broken
         clouds","icon":"04d"}],"clouds":54,"pop":0,"uvi":6.07},{"dt":1601229600,"sunrise":1601211164,"sunset":1601254115,"temp":{"day":297.35,"min":290.07,"max":300.82,"night":297.01,"eve":300.82,"morn":290.07},"feels_like":{"day":293.98,"night":293.01,"eve":296.83,"morn":287.43},"pressure":1020,"humidity":19,"dew_point":269.7,"wind_speed":1.8,"wind_deg":108,"weather":[{"id":801,"main":"Clouds","description":"few
         clouds","icon":"02d"}],"clouds":18,"pop":0,"uvi":6.09},{"dt":1601316000,"sunrise":1601297620,"sunset":1601340416,"temp":{"day":299.11,"min":292.3,"max":302.3,"night":292.85,"eve":299.82,"morn":292.3},"feels_like":{"day":295.07,"night":287.25,"eve":294.65,"morn":289},"pressure":1018,"humidity":17,"dew_point":272.46,"wind_speed":2.74,"wind_deg":70,"weather":[{"id":802,"main":"Clouds","description":"scattered
-        clouds","icon":"03d"}],"clouds":49,"pop":0,"uvi":5.68}]}'
-  recorded_at: Mon, 21 Sep 2020 15:23:12 GMT
+        clouds","icon":"03d"}],"clouds":49,"pop":0,"uvi":5.68}],"alerts":[{"sender_name":"NWS
+        Boulder (Northeastern Colorado)","event":"Air Quality Alert","start":1600693860,"end":1600725600,"description":"...ACTION
+        DAY FOR PARTICULATES FROM 400 PM SUNDAY UNTIL 400 PM\nMONDAY...\nThe Colorado
+        Department of Public Health and Environment has\nissued the following...\nWHAT...Action
+        Day for Particulates.\nWHERE...Douglas, Jefferson, Denver, western Arapahoe,
+        western\nAdams, Broomfield, Boulder, Larimer, and Weld Counties\nWHEN...400
+        PM Sunday September 20 to 400 PM Monday September 21\nIMPACTS...Action Day
+        for Particulates is now in effect for the\nseven-county Denver-Boulder metropolitan
+        area. Requests to limit\ndriving of non- ZEV vehicles (i.e., gas or diesel)
+        are now in\neffect until at least 4 PM Monday, September 21, 2020.  Smoke
+        from\nthe Cameron Peak and Mullen wildfires will result in elevated\nlevels
+        of fine particulates across the Front Range on Monday. Fine\nparticulate concentrations
+        in the Unhealthy for Sensitive Groups\ncategory will mainly be confined to
+        parts of Weld and southeastern\nLarimer Counties, including Ft. Collins and
+        Greeley. For areas\nincluded in this advisory that are not expected to exceed
+        the\nUnhealthy for Sensitive Groups (USG) air quality designation, we\nrequest
+        that activities, such as driving non- ZEV vehicles (i.e.,\ngas or diesel),
+        be reduced to lessen the impacts on neighboring\nair quality. Additional air
+        pollution in this region may directly\nworsen air quality or contribute to
+        precursors which may also\nadversely affect air quality.  For Colorado air
+        quality\nconditions, forecasts and advisories, visit:\nhttps://www.colorado.gov/airquality/colorado_summary.aspx\nHEALTH
+        INFORMATION...If smoke is thick or becomes thick in your\nneighborhood you
+        may want to remain indoors. This is especially\ntrue for those with heart
+        disease, respiratory illnesses, the very\nyoung, and the elderly. Consider
+        limiting outdoor activity when\nmoderate to heavy smoke is present. Consider
+        relocating\ntemporarily if smoke is present indoors and is making you ill.
+        If\nvisibility is less than 5 miles in smoke in your neighborhood,\nsmoke
+        has reached levels that are unhealthy."}]}'
+  recorded_at: Mon, 21 Sep 2020 17:30:54 GMT
 recorded_with: VCR 6.0.0

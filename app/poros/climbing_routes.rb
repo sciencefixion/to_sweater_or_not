@@ -4,11 +4,10 @@ class ClimbingRoutes
               :forecast,
               :routes
 
-  def initialize(location, climbing_route_data, forecast_data)
+  def initialize(location, forecast_data, climbing_route_data)
     @location = location
     @forecast = forecast_data[:current]
-    @routes = climbing_route_data[:routes]
-    # @location = climbing_route_data[:location]
-    # @distance_to_route = climbing_route_data[:distance_to_route]
+    @routes = climbing_route_data
+
   end
 end
