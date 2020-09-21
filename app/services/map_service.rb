@@ -7,6 +7,16 @@ class MapService < BaseService
     json(response)[:results].first[:locations].first[:latLng]
   end
 
+  self.get_distance(start_location, destination)
+    response = map_conn.get('/directions/v2/route') do |req|
+      req.params['from'] = start_location
+      req.params['to'] = destination
+      req.params['thumbMaps'] = false
+    end
+    json(response)
+    binding.pry
+  end
+
   class << self
     private
 

@@ -14,10 +14,10 @@ class Api::V1::ClimbingRoutesController < ApplicationController
     filtered_routes.each do |route|
       lon = route[:longitude]
       lat = route[:latitude]
-      MapService.get_distance()
+      MapService.get_distance(params[:location], "#{lat},#{lon}")
     end
     binding.pry
-    climbing_routes = ClimbingRoute.new(climbing_route_data, forecast_data)
+    climbing_routes = ClimbingRoutes.new(params[:location],climbing_route_data, forecast_data)
     # render json: ClimbingRouteSerializer.new()
   end
 end
