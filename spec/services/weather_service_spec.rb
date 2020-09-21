@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Weather Service' do
-  xit 'retrieves weather data for a city' do
+  it 'retrieves weather data for a city', :vcr do
 
     latLng = {
     :lat => 39.738453,
@@ -11,7 +11,12 @@ RSpec.describe 'Weather Service' do
     response = WeatherService.get_forecast(latLng[:lat], latLng[:lng])
 
     expect(response).to be_a(Hash)
-    # expect(response.count).to eq(2)
-    # expect(response).to eq()
+    expect(response.size).to eq(7)
+    expect(response).to have_key(:current)
+    expect(response[:hourly].size).to eq(48)
+    expect(response[:daily].size).to eq(8)
+    expect(response[:hourly][0][:temp].nil?).to eq(false)
+    expect(response[:daily].first[:temp][:max].nil?).to eq(false)
+    expect(response[:daily].last[:weather][0][:description].nil?).to eq(false)
   end
 end
