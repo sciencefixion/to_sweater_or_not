@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe 'Mountain request' do
+RSpec.describe 'Climbing Routes request' do
   it 'sends current forecast and nearby climbing_routes for a location and distance to each trail' do
 
-    get 'GET /api/v1/climbing_routes?location=erwin,tn'
+    get '/api/v1/climbing_routes?location=denver,co'
     routes = JSON.parse(response.body, symbolize_names: true)
 
     expect(response).to be_successful
