@@ -13,7 +13,5 @@ RSpec.describe 'Forecast request' do
     expect(forecast[:data][:attributes]).to have_key(:hourly)
     expect(forecast[:data][:attributes]).to have_key(:timezone)
     expect(forecast[:data][:attributes]).to have_key(:daily)
-
-
   end
 end
