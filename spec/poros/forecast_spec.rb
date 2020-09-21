@@ -4,12 +4,12 @@ RSpec.describe Forecast do
   VCR.use_cassette('retrieves_weather_data_for_a_city') do
     it 'exists and has readable attributes' do
 
-      latLng = {
+      lat_lng = {
       :lat => 39.738453,
       :lng => -104.984853
       }
 
-      forecast_data = WeatherService.get_forecast(latLng[:lat], latLng[:lng])
+      forecast_data = WeatherService.get_forecast(lat_lng[:lat], lat_lng[:lng])
 
       forecast = Forecast.new(forecast_data)
 
