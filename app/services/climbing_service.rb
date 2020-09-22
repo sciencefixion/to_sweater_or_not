@@ -1,6 +1,6 @@
-class MountainService < BaseService
+class ClimbingService < BaseService
   def self.get_routes(lat, lon)
-    response = mtn_conn.get('/data/get-routes-for-lat-lon') do |req|
+    response = climb_conn.get('/data/get-routes-for-lat-lon') do |req|
       req.params['lat'] = lat
       req.params['lon'] = lon
     end
@@ -10,7 +10,7 @@ class MountainService < BaseService
   class << self
     private
 
-    def mtn_conn
+    def climb_conn
       Faraday.new('https://www.mountainproject.com') do |req|
         req.params['key'] = ENV['MOUNTAIN_DATA_PROJECT_API_KEY']
       end

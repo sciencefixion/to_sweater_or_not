@@ -9,7 +9,7 @@ RSpec.describe ClimbingRoutes do
       :lng => -104.984853
       }
 
-      # nearby_routes_data = MountainService.get_routes(lat_lng[:lat], lat_lng[:lng])
+      # nearby_routes_data = ClimbingService.get_routes(lat_lng[:lat], lat_lng[:lng])
       #
       # nearby_routes = ClimbingRoutes.new(forecast_data)
       #

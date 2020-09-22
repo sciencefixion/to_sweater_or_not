@@ -4,7 +4,7 @@ class Api::V1::ClimbingRoutesController < ApplicationController
 
     forecast_data = WeatherService.get_forecast(lat_lng[:lat], lat_lng[:lng])
     filtered_forecast = Forecast.new(forecast_data).current
-    climbing_route_data = MountainService.get_routes(lat_lng[:lat], lat_lng[:lng])
+    climbing_route_data = ClimbingService.get_routes(lat_lng[:lat], lat_lng[:lng])
 
     nearby_routes = climbing_route_data[:routes]
 
