@@ -1,8 +1,8 @@
 class WeatherService < BaseService
-  def self.get_forecast(lat, lon)
+  def self.get_forecast_data(lat_lng)
     response = fore_conn.get('data/2.5/onecall') do |req|
-      req.params['lat'] = lat
-      req.params['lon'] = lon
+      req.params['lat'] = lat_lng[:lat]
+      req.params['lon'] = lat_lng[:lng]
       req.params['exclude'] = 'minutely'
     end
     json(response)
