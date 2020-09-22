@@ -3,6 +3,8 @@ class ClimbingService < BaseService
     response = climb_conn.get('/data/get-routes-for-lat-lon') do |req|
       req.params['lat'] = lat
       req.params['lon'] = lon
+      req.params['maxDistance'] = 5
+      req.params['maxResults'] = 5
     end
     json(response)
   end
