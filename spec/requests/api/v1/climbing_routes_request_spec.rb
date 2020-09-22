@@ -14,7 +14,6 @@ RSpec.describe 'Climbing Routes request' do
     expect(climb_response[:data][:attributes].size).to eq(3)
     expect(climb_response[:data][:attributes]).to have_key(:location)
     expect(climb_response[:data][:attributes][:forecast]).to_not be_nil
-    binding.pry
     expect(climb_response[:data][:attributes][:routes][0][:name]).to_not be_nil
     expect(climb_response[:data][:attributes][:routes][0]).to have_key(:type)
     expect(climb_response[:data][:attributes][:routes][0]).to have_key(:rating)

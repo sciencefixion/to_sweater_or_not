@@ -2,13 +2,7 @@ class ClimbingRoutesFacade
 
   def self.climbing_routes(location)
     lat_lng = MapService.get_latitude_and_longitude(location)
-
     forecast = ForecastFacade.current_summary(lat_lng)
-    binding.pry
-
-    # "forecast": {
-    #     "summary": "Raining cats and dogs",
-    #     "temperature": "65"
     climbing_route_data = ClimbingService.get_routes(lat_lng[:lat], lat_lng[:lng])
 
     nearby_routes = climbing_route_data[:routes]
