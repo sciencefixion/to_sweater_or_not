@@ -4,7 +4,6 @@ class ClimbingRoutesFacade
     lat_lng = MapService.get_latitude_and_longitude(location)
     forecast = ForecastFacade.current_summary(lat_lng)
     climbing_route_data = ClimbingService.get_routes(lat_lng[:lat], lat_lng[:lng])
-
     nearby_routes = climbing_route_data[:routes]
 
     filtered_routes = nearby_routes.each do |route|
