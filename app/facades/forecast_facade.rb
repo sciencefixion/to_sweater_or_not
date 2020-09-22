@@ -1,5 +1,4 @@
 class ForecastFacade
-
   def self.get_forecast(location)
     Forecast.new(forecast_data(location))
   end
@@ -28,18 +27,18 @@ class ForecastFacade
     def hourly_filtered(forecast_data)
       forecast_data[:hourly].each do |hour|
         hour.except!(:feels_like, :pressure,
-          :humidity, :dew_point, :clouds, :visibility, :wind_speed, :wind_gust, :wind_deg,
-          :pop, :rain, :snow)
+                     :humidity, :dew_point, :clouds, :visibility, :wind_speed, :wind_gust, :wind_deg,
+                     :pop, :rain, :snow)
       end
     end
 
     def daily_filtered(forecast_data)
       forecast_data[:daily].each do |item|
         item.except!(:sunrise, :sunset, :feels_like,
-          :pressure, :humidity, :dew_point,
-          :clouds, :wind_speed, :wind_deg, :pop, :uvi)
-          item[:temp].except!(:day, :night, :eve, :morn)
-          item[:weather][0].except!(:id, :description)
+                     :pressure, :humidity, :dew_point,
+                     :clouds, :wind_speed, :wind_deg, :pop, :uvi)
+        item[:temp].except!(:day, :night, :eve, :morn)
+        item[:weather][0].except!(:id, :description)
       end
     end
   end
