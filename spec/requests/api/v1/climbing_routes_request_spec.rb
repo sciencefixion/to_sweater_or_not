@@ -8,16 +8,17 @@ RSpec.describe 'Climbing Routes request' do
     expect(response).to be_successful
     expect(response.content_type).to eq('application/json')
 
-    climb_data = JSON.parse(response.body, symbolize_names: true)
+    climb_response = JSON.parse(response.body, symbolize_names: true)
 
-    expect(climb_data).to be_a(Hash)
-    expect(climb_data[:data][:attributes].size).to eq(3)
-    expect(climb_data[:data][:attributes]).to have_key(:location)
-    expect(climb_data[:data][:attributes]).to have_key(:forecast)
-    expect(climb_data[:data][:attributes][:routes][0][:name]).to_not be_nil
-    expect(climb_data[:data][:attributes][:routes][0]).to have_key(:type)
-    expect(climb_data[:data][:attributes][:routes][0]).to have_key(:rating)
-    expect(climb_data[:data][:attributes][:routes][0]).to have_key(:distance_to_route)
-    expect(climb_data[:data][:attributes][:routes][0][:distance_to_route]).to eq(30.513)
+    expect(climb_response).to be_a(Hash)
+    expect(climb_response[:data][:attributes].size).to eq(3)
+    expect(climb_response[:data][:attributes]).to have_key(:location)
+    expect(climb_response[:data][:attributes][:forecast]).to_not be_nil
+    binding.pry
+    expect(climb_response[:data][:attributes][:routes][0][:name]).to_not be_nil
+    expect(climb_response[:data][:attributes][:routes][0]).to have_key(:type)
+    expect(climb_response[:data][:attributes][:routes][0]).to have_key(:rating)
+    expect(climb_response[:data][:attributes][:routes][0]).to have_key(:distance_to_route)
+    expect(climb_response[:data][:attributes][:routes][0][:distance_to_route]).to eq(30.513)
   end
 end
