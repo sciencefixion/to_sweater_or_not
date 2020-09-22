@@ -18,13 +18,17 @@ class Forecast
 
   def filtered_hourly_forecast(forecast_data)
     forecast_data[:hourly].each do |hour|
-      hour.except!(:feels_like, :pressure, :humidity, :dew_point, :clouds, :visibility, :wind_speed, :wind_gust, :wind_deg, :pop, :rain, :snow)
+      hour.except!(:feels_like, :pressure,
+                   :humidity, :dew_point, :clouds, :visibility, :wind_speed, :wind_gust, :wind_deg,
+                   :pop, :rain, :snow)
     end
   end
 
   def filtered_daily_forecast(forecast_data)
     forecast_data[:daily].each do |item|
-      item.except!(:sunrise, :sunset, :feels_like, :pressure, :humidity, :dew_point, :clouds, :wind_speed, :wind_deg, :pop, :uvi)
+      item.except!(:sunrise, :sunset, :feels_like,
+                   :pressure, :humidity, :dew_point,
+                   :clouds, :wind_speed, :wind_deg, :pop, :uvi)
       item[:temp].except!(:day, :night, :eve, :morn)
       item[:weather][0].except!(:id, :description)
     end
