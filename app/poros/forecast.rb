@@ -10,7 +10,6 @@ class Forecast
     @current = filtered_current_forecast(forecast_data)
     @hourly = filtered_hourly_forecast(forecast_data)
     @daily = filtered_daily_forecast(forecast_data)
-    binding.pry
   end
 
   def filtered_current_forecast(forecast_data)
