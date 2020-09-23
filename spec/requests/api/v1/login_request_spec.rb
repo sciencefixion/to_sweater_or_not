@@ -6,6 +6,7 @@ RSpec.describe 'User login request' do
       email: 'walter@sobchak_security.com',
       password: 'AWorldOfPain'
     }
+    walter = User.create(user_params)
 
     post '/api/v1/sessions', params: user_params
     registration_response = JSON.parse(response.body, symbolize_names: true)
@@ -24,10 +25,14 @@ RSpec.describe 'User login request' do
   it 'fails with status 401 for bad credentials' do
     user_params = {
       email: 'walter@sobchak_security.com',
+      password: 'AWorldOfPain'
+    }
+    walter = User.create(user_params)
+
+    post '/api/v1/sessions', params: {
+      email: 'walter@sobchak_security.com',
       password: 'MyDirtyUndiesDudeTheWhites'
     }
-
-    post '/api/v1/users', params: user_params
 
     registration_response = JSON.parse(response.body, symbolize_names: true)
 
@@ -39,10 +44,14 @@ RSpec.describe 'User login request' do
   end
   xit 'fails with status 400 when there is a missing field' do
     user_params = {
+      email: 'walter@sobchak_security.com',
       password: 'AWorldOfPain'
     }
+    walter = User.create(user_params)
 
-    post '/api/v1/users', params: user_params
+    post '/api/v1/sessions', params: {
+      password: 'AWorldOfPain'
+    }
 
     registration_response = JSON.parse(response.body, symbolize_names: true)
     expect(response).to_not be_successful
