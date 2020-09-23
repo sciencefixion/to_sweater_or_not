@@ -21,7 +21,7 @@ RSpec.describe 'User login request' do
     expect(registration_response[:data][:attributes][:email]).to eq(user_params[:email])
     expect(registration_response[:data][:attributes][:api_key]).to_not be_nil
   end
-  it 'fails with status 400 for bad credentials' do
+  it 'fails with status 401 for bad credentials' do
     user_params = {
       email: 'walter@sobchak_security.com',
       password: 'MyDirtyUndiesDudeTheWhites'
@@ -32,9 +32,9 @@ RSpec.describe 'User login request' do
     registration_response = JSON.parse(response.body, symbolize_names: true)
 
     expect(response).to_not be_successful
-    expect(response.status).to eq(400)
+    expect(response.status).to eq(401)
     expect(response.content_type).to eq('application/json')
-    expect(registration_response[:body]).to include("Bad credentials")
+    expect(registration_response[:body]).to include("Unauthorized")
     expect(registration_response).to_not have_key(:password)
   end
   xit 'fails with status 400 when there is a missing field' do
