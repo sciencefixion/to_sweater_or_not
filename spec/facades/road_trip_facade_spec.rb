@@ -7,11 +7,12 @@ RSpec.describe RoadTripFacade do
     destination = 'Pueblo, CO'
 
     trip = RoadTripFacade.trip_out(origin, destination)
-    binding.pry
 
-
+    expect(trip.origin).to_not be_nil
+    expect(trip.destination).to_not be_nil
     expect(trip.travel_time).to eq('01:43:57')
-    expect(trip[:data][:attributes][:origin]).to_not be_nil
-    expect(trip[:data][:attributes][:destination]).to_not be_nil
+    expect(trip.arrival_forecast).to have_key(:summary)
+    expect(trip.arrival_forecast).to have_key(:temperature)
+
   end
 end
