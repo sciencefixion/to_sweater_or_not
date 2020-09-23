@@ -7,13 +7,13 @@ class MapService < BaseService
     json(response)[:results].first[:locations].first[:latLng]
   end
 
-  def self.get_distance(start_location, destination)
+  def self.get_travel_time(origin, destination)
     response = map_conn.get('/directions/v2/route') do |req|
-      req.params['from'] = start_location
+      req.params['from'] = origin
       req.params['to'] = destination
       req.params['thumbMaps'] = false
     end
-    json(response)[:route][:distance]
+    json(response)[:route][:formattedTime]
   end
 
   class << self
