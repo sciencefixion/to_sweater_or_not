@@ -29,24 +29,26 @@ This app exposes an API that satisfies the fictional front-end team’s requirem
 * Configuration
 
 Run `bundle install`
+
 Run `bundle exec figaro install`
+
 Add API keys to the newly created application.yml file
 
 * Database creation
 
-Run `rails db:create`
+`rails db:create`
 
 * Database initialization
 
-Run `rails db:migrate`
+`rails db:migrate`
 
 * How to run the test suite
 
-Run `bundle exec rspec`
+`bundle exec rspec`
 
 * Deployment instructions
 
-Run `rails s`
+`rails s`
 
 ## Endpoints
 
