@@ -3,6 +3,14 @@ class ForecastFacade
     Forecast.new(forecast_data(location))
   end
 
+  def self.current_summary(location)
+    current_forecast = Forecast.new(forecast_data(location)).current
+    {
+      'temperature': (current_forecast[:temp]).to_s,
+      'summary': (current_forecast[:weather][0][:description]).to_s
+    }
+  end
+
   class << self
     private
 
@@ -42,12 +50,4 @@ class ForecastFacade
       end
     end
   end
-  # def self.current_summary(lat_lng)
-  #   forecast_data = WeatherService.get_forecast_data(lat_lng[:lat], lat_lng[:lng])
-  #   current_forecast = Forecast.new(forecast_data).current
-  #   {
-  #     'summary': "#{current_forecast[:weather][0][:description]}",
-  #     'temperature': "#{current_forecast[:temp]}",
-  #   }
-  # end
 end

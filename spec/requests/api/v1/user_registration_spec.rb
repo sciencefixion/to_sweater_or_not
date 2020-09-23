@@ -9,8 +9,6 @@ RSpec.describe 'User Registration request' do
     }
 
     post '/api/v1/users', params: user_params
-
-
     registration_response = JSON.parse(response.body, symbolize_names: true)
 
     expect(response).to be_successful

@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 23 Sep 2020 00:11:47 GMT
+      - Wed, 23 Sep 2020 06:28:27 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -42,7 +42,7 @@ http_interactions:
       - nginx + Phusion Passenger
     body:
       encoding: ASCII-8BIT
-      string: "{\n    \"id\": \"a55892e0-018b-4eed-99f1-ed64a6ba3f4c\", \n    \"output_url\":
-        \"https://api.deepai.org/job-view-file/a55892e0-018b-4eed-99f1-ed64a6ba3f4c/outputs/output.jpg\"\n}"
-  recorded_at: Wed, 23 Sep 2020 00:11:47 GMT
+      string: "{\n    \"id\": \"713944ff-fd5b-4749-89a6-71eb04acf83b\", \n    \"output_url\":
+        \"https://api.deepai.org/job-view-file/713944ff-fd5b-4749-89a6-71eb04acf83b/outputs/output.jpg\"\n}"
+  recorded_at: Wed, 23 Sep 2020 06:28:27 GMT
 recorded_with: VCR 6.0.0
