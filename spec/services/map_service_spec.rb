@@ -14,11 +14,11 @@ RSpec.describe 'Map Service' do
     expect(response.count).to eq(2)
     expect(response).to eq(latLng)
   end
-  it 'retrieves directions to given locations', :vcr do
+  it 'retrieves travel_time from an origin to a destination', :vcr do
 
 
-    response = MapService.get_distance("Denver, CO", "39.750307,-104.999472")
+    response = MapService.get_travel_time("Denver, CO", "39.750307,-104.999472")
 
-    expect(response).to eq(1.984)
+    expect(response).to eq("00:06:24")
   end
 end
