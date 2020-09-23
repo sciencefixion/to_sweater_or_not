@@ -23,7 +23,9 @@ This app exposes an API that satisfies the fictional front-end team’s requirem
  Sign up for the API keys required to use this app at the web addresses below.
 
  MapQuest API: https://developer.mapquest.com
+ 
  OpenWeather API: https://openweathermap.org/api
+ 
  DeepAI Text To Image API: https://deepai.org/machine-learning-model/text2img
 
 * Configuration
