@@ -6,8 +6,8 @@ class ForecastFacade
   def self.current_summary(location)
     current_forecast = Forecast.new(forecast_data(location)).current
     {
-      'temperature': "#{current_forecast[:temp]}",
-      'summary': "#{current_forecast[:weather][0][:description]}"
+      'temperature': (current_forecast[:temp]).to_s,
+      'summary': (current_forecast[:weather][0][:description]).to_s
     }
   end
 

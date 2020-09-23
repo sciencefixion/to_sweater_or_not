@@ -16,6 +16,5 @@ class RoadTripFacade
     def travel_time(origin, destination)
       MapService.get_travel_time(origin, destination)
     end
-
   end
 end
