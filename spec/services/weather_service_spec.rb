@@ -11,7 +11,7 @@ RSpec.describe 'Weather Service' do
     response = WeatherService.get_forecast_data(lat_lng)
 
     expect(response).to be_a(Hash)
-    expect(response.size).to eq(7)
+    expect(response.size).to eq(8)
     expect(response).to have_key(:current)
     expect(response[:hourly].size).to eq(48)
     expect(response[:daily].size).to eq(8)
