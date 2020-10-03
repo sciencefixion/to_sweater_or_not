@@ -1,0 +1,28 @@
+version: 2.1
+orbs:
+  ruby: circleci/ruby@0.1.2 
+
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.5.3-stretch-node
+        environment: #environment variables for primary container
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+          PGHOST: 127.0.0.1
+          PGUSER: postgres
+          RAILS_ENV: test
+      - image: circleci/postgres:12.1 #database image
+        environment: #environment variables for database
+          POSTGRES_USER: to_sweater_or_not
+          POSTGRES_DB: to_sweater_or_not_production
+          POSTGRES_PASSWORD: <%= ENV['TO_SWEATER_OR_NOT_DATABASE_PASSWORD'] %>
+    executor: ruby/default
+    steps:
+      - checkout
+      - run:
+          name: install dependencies
+          command: |
+            gem install bundler:2.1.4
+            bundle install
